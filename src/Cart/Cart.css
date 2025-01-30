@@ -1,0 +1,135 @@
+.cart-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .cart-delivery {
+    display: flex;
+    justify-content: space-between;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 50px;
+  }
+  
+  .change-btn {
+    color: #e91e63;
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cart-offers, .cart-savings, .cart-special-deals {
+    background: #e0f7fa;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    gap: 12px;
+  }
+  
+  .product-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+  
+  .cart-details h3 {
+    font-size: 16px;
+  }
+  
+  .cart-price {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .cart-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+  
+  .btn-icon, .btn-delete {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-icon {
+    background: #ddd;
+  }
+  
+  .btn-delete {
+    background: #ff4d4d;
+    color: white;
+  }
+  
+  .cart-footer {
+    text-align: center;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .place-order {
+    width: 100%;
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+  }
+  .box {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+
+
+  .box2{
+    height: 50px;
+  }
+
+  

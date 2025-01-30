@@ -1,0 +1,104 @@
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;  
+}
+
+.img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;  
+  z-index: 0;  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background: rgba(0, 0, 0, 0.7); /* Black overlay for better text visibility */
+  z-index: 1; /* Overlay behind text */
+}
+
+.create-account{
+   font-style: italic;
+   font-size: 15px;
+   color: rgb(6, 96, 131); ;
+
+   
+}
+
+.login-card {
+  position: relative;
+  z-index: 2;
+  margin-top: -100px;
+  border-radius: 10px;
+  width: 350px;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+/* Heading and description */
+.login-card h2 {
+  font-size: 2.5rem;
+  color:white;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  font-size: 1rem;
+  color:white;
+  margin-bottom: 20px;
+}
+
+/* Buttons for Seller and Donor login */
+.login-options {
+  display: flex;
+  flex-direction: column;
+   
+}
+
+.login-options div{
+ display: flex;
+  
+  align-self: flex-end;
+}
+
+
+.login-btn {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(44, 164, 44);
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .login-card {
+    width: 80%;  /* Adjust width for smaller screens */
+    padding: 20px;
+  }
+
+  .login-btn {
+
+
+
+   color: white;
+   font-weight: bold;
+    font-size: 1rem;  /* Adjust font size on smaller screens */
+  }
+}
