@@ -1,25 +1,22 @@
 import React, { useState } from "react";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, UploadCloud } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "./DonatePage.css";
 
-// Function to simulate API call
 const mockApiCall = (data) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (data.itemName && data.itemDescription && data.price && data.itemImage) {
-        resolve("Donation submitted successfully!");
+        resolve("🎉 Donation submitted successfully!");
       } else {
-        reject("Failed to submit donation. Please fill all fields.");
+        reject("⚠️ Please fill all fields before submitting.");
       }
     }, 2000);
   });
 };
 
 const DonatePage = () => {
-  const navigate = useNavigate(); // Move useNavigate here
-
-  // State for the form
+  const navigate = useNavigate();
   const [itemName, setItemName] = useState("");
   const [itemDescription, setItemDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -44,63 +41,79 @@ const DonatePage = () => {
 
   return (
     <div className="donate-page">
-
-      <div className="app-bar">  
-        <ChevronLeft className="left-icon " size={24} onClick={() => navigate(-1)} /> {/* Go Back */}
-        Donate an Item
+      {/* Header Section */}
+      <div className="app-bar">
+        <ChevronLeft className="left-icon" size={24} onClick={() => navigate(-1)} />
+        <h2>Donate an Item</h2>
       </div>
 
+      {/* Donation Form */}
       <form onSubmit={handleSubmit} className="donate-form">
         <div className="form-group">
-          <label htmlFor="itemName">Item Name</label>
+          <label htmlFor="itemName">📦 Item Name</label>
           <input
             type="text"
             id="itemName"
             value={itemName}
             onChange={(e) => setItemName(e.target.value)}
+            placeholder="Enter item name"
             required
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="itemDescription">Item Description</label>
+          <label htmlFor="itemDescription">📝 Item Description</label>
           <textarea
             id="itemDescription"
-            rows="4"
+            rows="3"
             value={itemDescription}
             onChange={(e) => setItemDescription(e.target.value)}
+            placeholder="Describe the item"
             required
           ></textarea>
         </div>
-        <div className="form-group">
-          <label htmlFor="price">Price</label>
-          <input
-            type="number"
-            id="price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-            required
-          />
+
+     
+
+        {/* Image Upload with Preview */}
+        <div className="form-group file-upload">
+          <div className="upload-box">
+            <input
+              type="file"
+              id="itemImage"
+              onChange={(e) => {
+                const file = e.target.files[0];
+                if (file) {
+                  setItemImage(file);
+                  setItemImageName(file.name);
+                }
+              }}
+              accept="image/*"
+            />
+            <UploadCloud size={20} />
+          </div>
+          {itemImage && (
+            <div className="image-preview">
+              <img src={URL.createObjectURL(itemImage)} alt="Preview" />
+              <p>{itemImageName}</p>
+            </div>
+          )}
         </div>
-        <div className="form-group">
-          <label htmlFor="itemImage">Item Image</label>
-          <input
-            type="file"
-            id="itemImage"
-            onChange={(e) => {
-              setItemImage(e.target.files[0]);
-              setItemImageName(e.target.files[0].name);
-            }}
-          />
-          {itemImageName && <p>Selected file: {itemImageName}</p>}
-        </div>
-        <button type="submit" disabled={loading}>
-          {loading ? "Submitting..." : "Submit"}
+
+        <button type="submit" disabled={loading} className="submit-btn">
+          {loading ? "Submitting..." : "📩 Submit Donation"}
         </button>
-        {message && <p className="message">{message}</p>}
       </form>
 
+      {/* Display Message */}
+      {message && <p className={`message ${message.includes("⚠️") ? "error" : "success"}`}>{message}</p>}
+
+      {/* Quote Section */}
       <div className="quote">
-        "The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi
+        <blockquote>
+          "The best way to find yourself is to lose yourself in the service of others."
+        </blockquote>
+        <span>– Mahatma Gandhi</span>
       </div>
     </div>
   );

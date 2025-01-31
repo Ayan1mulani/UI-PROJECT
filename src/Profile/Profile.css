@@ -4,13 +4,13 @@
     align-items: center;
     height: 100vh;
     background-color: black;
-    color: #fff; /* White text */
+    color: #fff; 
   }
   
   .profile-card {
     width: 80%;
     max-width: 600px;
-    background-color: #1e1e1e; /* Darker card background */
+    background-color: #1e1e1e; 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -78,6 +78,9 @@
     color: #fff;
   }
   
+
+
+
   .update-btn {
     width: 100%;
     padding: 12px;
@@ -94,8 +97,10 @@
     background-color: #e68900; /* Darker orange on hover */
   }
 
+
+
   .bg-2{
-    font: white;
+    font: rgb(96, 92, 92);
     height: 20px;
     font-weight: bolder;
   }
