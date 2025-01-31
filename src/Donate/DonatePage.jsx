@@ -19,7 +19,6 @@ const DonatePage = () => {
   const navigate = useNavigate();
   const [itemName, setItemName] = useState("");
   const [itemDescription, setItemDescription] = useState("");
-  const [price, setPrice] = useState("");
   const [itemImage, setItemImage] = useState(null);
   const [itemImageName, setItemImageName] = useState("");
   const [loading, setLoading] = useState(false);
@@ -30,7 +29,7 @@ const DonatePage = () => {
     setLoading(true);
     setMessage("");
     try {
-      const response = await mockApiCall({ itemName, itemDescription, price, itemImage });
+      const response = await mockApiCall({ itemName, itemDescription, itemImage });
       setMessage(response);
     } catch (error) {
       setMessage(error);
