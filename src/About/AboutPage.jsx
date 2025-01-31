@@ -16,6 +16,7 @@ const AboutPage = () => {
           <p>Email: contact@ourplatform.com</p>
           <p>Phone: +91 98765 43210</p>
         </div>
+        
 
         <div className="about-section">
           <h2>Address</h2>
