@@ -1,0 +1,157 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f9fafb;
+  font-family: sans-serif;
+}
+
+.profile-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-header h1 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  font-weight: bold;
+}
+
+.settings-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.settings-btn:hover {
+  color: #1d4ed8;
+}
+
+.icon {
+  margin-right: 0.4rem;
+}
+
+.profile-main {
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+.profile-card {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.profile-banner {
+  background: #2563eb;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile-user-icon {
+  background: #1e40af;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.profile-user-info h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-user-info p {
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile-member-date {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: #374151;
+}
+
+.tab.active {
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+}
+
+.profile-tab-content {
+  padding: 1.5rem;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: start;
+  gap: 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 1rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.profile-footer {
+  padding: 1rem 1.5rem;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  color: #1d4ed8;
+}

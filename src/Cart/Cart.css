@@ -48,11 +48,11 @@
     gap: 12px;
   }
   
-  .product-image {
+  /* .product-image {
     width: 60px;
     height: 60px;
     border-radius: 8px;
-  }
+  } */
   
   .cart-details h3 {
     font-size: 16px;

@@ -1,0 +1,96 @@
+.model-view-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .camera-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .model-canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .controls-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .back-button {
+    background-color: #1976d2 !important;
+    color: white !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .ar-toggle-button {
+    background-color: #ff9800 !important;
+    color: white !important;
+  }
+  
+  .scale-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 5px;
+  }
+  
+  .ar-instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 3;
+    max-width: 80%;
+  }
+  
+  .ar-instructions h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .ar-instructions p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .controls-container {
+      top: 10px;
+      left: 10px;
+    }
+    
+    .ar-instructions {
+      padding: 10px 15px;
+    }
+  }
